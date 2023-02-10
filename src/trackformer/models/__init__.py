@@ -12,6 +12,7 @@ from .detr_tracking import DeformableDETRTracking, DETRTracking
 from .matcher import build_matcher
 from .transformer import build_transformer
 
+# a special use to build model
 
 def build_model(args):
     if args.dataset == 'coco':

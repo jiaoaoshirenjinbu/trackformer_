@@ -1,6 +1,8 @@
 # Copyright (c) Facebook, Inc. and its affiliates. All Rights Reserved
 """
 Generates COCO data and annotation structure from CrowdHuman data.
+python ----
+可以将数据集加载进来
 """
 import json
 import os

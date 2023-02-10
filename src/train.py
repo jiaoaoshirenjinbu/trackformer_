@@ -7,19 +7,24 @@ from argparse import Namespace
 from pathlib import Path
 
 import numpy as np
+# sacred is used to manage our experiment, store parameters and logs.
 import sacred
 import torch
+# yaml is a kind of configuration.
 import yaml
 from torch.utils.data import DataLoader, DistributedSampler
 
 import trackformer.util.misc as utils
 from trackformer.datasets import build_dataset
 from trackformer.engine import evaluate, train_one_epoch
+# ?????
 from trackformer.models import build_model
 from trackformer.util.misc import nested_dict_to_namespace
 from trackformer.util.plot_utils import get_vis_win_names
 from trackformer.vis import build_visualizers
 
+
+# load configuration from ./cfgs/
 ex = sacred.Experiment('train')
 ex.add_config('cfgs/train.yaml')
 ex.add_named_config('deformable', 'cfgs/train_deformable.yaml')
@@ -34,7 +39,7 @@ ex.add_named_config('coco_person_masks', 'cfgs/train_coco_person_masks.yaml')
 ex.add_named_config('full_res', 'cfgs/train_full_res.yaml')
 ex.add_named_config('multi_frame', 'cfgs/train_multi_frame.yaml')
 
-
+# main handling code
 def train(args: Namespace) -> None:
     print(args)
 
@@ -61,6 +66,8 @@ def train(args: Namespace) -> None:
             vars(args),
             open(output_dir / 'config.yaml', 'w'), allow_unicode=True)
 
+    # prepare the training before.
+
     device = torch.device(args.device)
 
     # fix the seed for reproducibility
@@ -76,10 +83,11 @@ def train(args: Namespace) -> None:
     torch.manual_seed(seed)
     torch.cuda.manual_seed(seed)
     torch.backends.cudnn.deterministic = True
-
+    # build model using models package
     model, criterion, postprocessors = build_model(args)
     model.to(device)
 
+    # 可视化？
     visualizers = build_visualizers(args, list(criterion.weight_dict.keys()))
 
     model_without_ddp = model
@@ -341,7 +349,12 @@ def train(args: Namespace) -> None:
     total_time_str = str(datetime.timedelta(seconds=int(total_time)))
     print('Training time {}'.format(total_time_str))
 
+# it's a python decorator(装饰器)
+# it just like wrapped some other functions outside the function
+# we can use it to print logs.
 
+
+# it's not used in this doc
 @ex.main
 def load_config(_config, _run):
     """ We use sacred only for config loading from YAML files. """
