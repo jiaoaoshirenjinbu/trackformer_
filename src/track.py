@@ -23,11 +23,15 @@ mm.lap.default_solver = 'lap'
 
 # 加载track这个试验，experiment是个sacred类
 ex = sacred.Experiment('track')
+# 默认参数
 ex.add_config('cfgs/track.yaml')
+# 可以选择的参数，二选一
+# be added as an update
 ex.add_named_config('reid', 'cfgs/track_reid.yaml')
 
 
 @ex.automain
+# all functions decorated with ex.automain, ex.main and ex.capture are captured functions.
 def main(seed, dataset_name, obj_detect_checkpoint_file, tracker_cfg,
          write_images, output_dir, interpolate, verbose, load_results_dir,
          data_root_dir, generate_attention_maps, frame_range,
