@@ -1,14 +1,9 @@
-#？？？
 output_dir: null
-#？？？
 verbose: false
-#种子
 seed: 666
 
-#权值文件？？？
 obj_detect_checkpoint_file: models/mot17_crowdhuman_deformable_multi_frame/checkpoint_epoch_40.pth
 
-#是否差值
 interpolate: False
 # if available load tracking results and only evaluate
 load_results_dir: null
@@ -17,42 +12,35 @@ load_results_dir: null
 dataset_name: MOT17-ALL-ALL
 data_root_dir: data
 
-#？？？
 # [False, 'debug', 'pretty']
 # compile video with: `ffmpeg -f image2 -framerate 15 -i %06d.jpg -vcodec libx264 -y movie.mp4 -vf scale=320:-1`
 write_images: False
 # Maps are only visualized if write_images is True
 generate_attention_maps: False
 
-#只对一定范围内的帧进行跟踪、评估和写入图像（以浮动分数计）。
 # track, evaluate and write images only for a range of frames (in float fraction)
 frame_range:
     start: 0.0
     end: 1.0
 
-#追踪器的参数
 tracker_cfg:
-    # [False, 'center_distance', 'min_iou_0_5'] ？？？？
+    # [False, 'center_distance', 'min_iou_0_5']
     public_detections: False
-    # score threshold for detections 检测阈值
+    # score threshold for detections
     detection_obj_score_thresh: 0.4
-    # score threshold for keeping the track alive 轨迹阈值
+    # score threshold for keeping the track alive
     track_obj_score_thresh: 0.4
-    # NMS threshold for detection  nms阈值？？？
+    # NMS threshold for detection
     detection_nms_thresh: 0.9
-    # NMS threshold while tracking  nms追踪阈值？？？
+    # NMS theshold while tracking
     track_nms_thresh: 0.9
-#    分数必须低于track_obj_score_thresh才会被终止的相交步骤数。
     # number of consective steps a score has to be below track_obj_score_thresh for a track to be terminated
     steps_termination: 1
-#    多帧关注的前一帧的距离
     # distance of previous frame for multi-frame attention
     prev_frame_dist: 1
-#    在reid中，不活动的轨道会被保留并被考虑到多少个时间步数
-    # How many timesteps inactive tracks are kept and considered for reid
+    # How many timesteps inactive tracks are kept and cosidered for reid
     inactive_patience: -1
-#    检测到的和旧轨迹需要多大程度的相似才能被认为是同一个人
-    # How similar do image and old track need to be considered the same person
+    # How similar do image and old track need to be to be considered the same person
     reid_sim_threshold: 0.0
     reid_sim_only: false
     reid_score_thresh: 0.4

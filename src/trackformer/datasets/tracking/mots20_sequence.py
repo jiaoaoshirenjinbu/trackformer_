@@ -148,7 +148,7 @@ class SegmentedObject:
 
 
 def load_mots_gt(path: str) -> dict:
-    """Load MOTS ground truth from path."""
+    """Load MOTS20 ground truth from path."""
     objects_per_frame = {}
     track_ids_per_frame = {}  # Check that no frame contains two objects with same id
     combined_mask_per_frame = {}  # Check that no frame contains overlapping masks

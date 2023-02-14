@@ -215,7 +215,7 @@ def generate_coco_from_mot(split_name='train', seqs_names=None,
 
             annotations['annotations'].extend(seq_annotations)
 
-            #change ignore based on MOTS mask
+            #change ignore based on MOTS20 mask
             if mots_vis:
                 gt_file_mots = os.path.join(
                     root_split_mots_path,

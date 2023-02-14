@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.7 (base)" project-jdk-type="Python SDK" />
+  <component name="UnattendedHostPersistenceState">
+    <option name="openedFilesInfos">
+      <list>
+        <OpenedFileInfo>
+          <option name="caretOffset" value="813" />
+          <option name="fileUrl" value="file://$PROJECT_DIR$/src/track.py" />
+        </OpenedFileInfo>
+        <OpenedFileInfo>
+          <option name="caretOffset" value="8407" />
+          <option name="fileUrl" value="file://$PROJECT_DIR$/src/generate_coco_from_mot.py" />
+        </OpenedFileInfo>
+        <OpenedFileInfo>
+          <option name="caretOffset" value="8073" />
+          <option name="fileUrl" value="file://$PROJECT_DIR$/src/compute_best_mean_epoch_from_splits.py" />
+        </OpenedFileInfo>
+        <OpenedFileInfo>
+          <option name="caretOffset" value="4428" />
+          <option name="fileUrl" value="file://$PROJECT_DIR$/src/parse_mot_results_to_tex.py" />
+        </OpenedFileInfo>
+        <OpenedFileInfo>
+          <option name="caretOffset" value="3862" />
+          <option name="fileUrl" value="file://$PROJECT_DIR$/src/run_with_submitit.py" />
+        </OpenedFileInfo>
+        <OpenedFileInfo>
+          <option name="caretOffset" value="0" />
+          <option name="fileUrl" value="file://$PROJECT_DIR$/models/mot17_crowdhuman_deformable_multi_frame/config.yaml" />
+        </OpenedFileInfo>
+        <OpenedFileInfo>
+          <option name="caretOffset" value="5835" />
+          <option name="fileUrl" value="file://$PROJECT_DIR$/src/track_param_search.py" />
+        </OpenedFileInfo>
+        <OpenedFileInfo>
+          <option name="caretOffset" value="0" />
+          <option name="fileUrl" value="file://$PROJECT_DIR$/src/train.py" />
+        </OpenedFileInfo>
+        <OpenedFileInfo>
+          <option name="caretOffset" value="5893" />
+          <option name="fileUrl" value="file:///opt/conda/lib/python3.7/site-packages/sacred/experiment.py" />
+        </OpenedFileInfo>
+        <OpenedFileInfo>
+          <option name="caretOffset" value="397" />
+          <option name="fileUrl" value="file://$PROJECT_DIR$/cfgs/track.yaml" />
+        </OpenedFileInfo>
+        <OpenedFileInfo>
+          <option name="caretOffset" value="0" />
+          <option name="fileUrl" value="file://$PROJECT_DIR$/cfgs/submit.yaml" />
+        </OpenedFileInfo>
+      </list>
+    </option>
+  </component>
+</project>
