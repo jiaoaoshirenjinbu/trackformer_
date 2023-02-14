@@ -36,7 +36,7 @@
         ```
         wget https://motchallenge.net/data/MOTS.zip
         unzip MOTS.zip
-        python src/generate_coco_from_mot.py --mots
+        python src/generate_coco_from_mot.py --mots20
         ```
 
     4. (Optional) [CrowdHuman](https://www.crowdhuman.org/download.html):

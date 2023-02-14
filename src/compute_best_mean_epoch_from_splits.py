@@ -149,7 +149,7 @@ RUNS = [
 #     ]
 
 #
-# MOTS 4-fold split
+# MOTS20 4-fold split
 #
 
 # RUNS = [

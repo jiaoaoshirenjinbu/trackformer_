@@ -21,7 +21,6 @@ from trackformer.util.track_utils import (evaluate_mot_accums, get_mot_accum,
 
 mm.lap.default_solver = 'lap'
 
-# 加载track这个试验，experiment是个sacred类
 ex = sacred.Experiment('track')
 # 默认参数
 ex.add_config('cfgs/track.yaml')
