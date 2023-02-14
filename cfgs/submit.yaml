@@ -1,11 +1,12 @@
 # Number of gpus to request on each node
 num_gpus: 1
+#显存
 vram: 12GB
-# memory allocated per GPU in GB
+# memory allocated per GPU in GB（内存）
 mem_per_gpu: 20
-# Number of nodes to request
+# Number of nodes to request（？？？）
 nodes: 1
-# Duration of the job
+# Duration of the job（工作期限）
 timeout: 4320
 # Job dir. Leave empty for automatic.
 job_dir: ''
